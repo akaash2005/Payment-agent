@@ -20,11 +20,11 @@ def voice():
     conversation = [m for m in messages if m["role"] != "system"]
 
     system = SYSTEM_PROMPT.format(
-        customer_name="Rahul Mehta",
-        amount="Rs. 12,500",
-        due_date="March 1, 2026",
-        attempts="3"
-    )
+    customer_name="Rahul Mehta",
+    amount="twelve thousand five hundred rupees",
+    due_date="March first, twenty twenty six",
+    attempts="three"
+)
 
     stream = client.chat.completions.create(
         model="llama-3.3-70b-versatile",
